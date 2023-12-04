@@ -1,0 +1,36 @@
+class AppRoute {
+  static const String splash_screen = "route_splash_screen";
+  static const String wrapper = "route_wrapper";
+  static const String cart = "route_carts";
+  static const String category = "route_category";
+  static const String profile = "route_profile";
+  static const String home = "route_home";
+  static const String login = "route_login";
+  static const String registration = "route_registration";
+  static const String product_details = "route_product_details";
+  static const String product = "_products_";
+  static const String topSellers = "_route_topSellers";
+  static const String seller_details = "seller details_aa";
+  static const String filteredProduct = "filtered_product";
+  static const String allOffers = "allOffers__";
+  static const String address = "route_address";
+  static const String order = "route_order";
+  static const String orderDetails = "route_order_details";
+  static const String profileEdit = "route_profile edit";
+  static const String paymentInfo = "route_payment_info";
+  static const String bkash = "route_bkash";
+  static const String nagad = "route_nagad";
+  static const String upay = "route_upay";
+  static const String sslCommerz = "route_ssl_commerz";
+  static const String ucb = "route_ucb";
+  static const String checkout = "route_checkout";
+  static const String review = "route_review";
+  static const String reviewtwo = "route_reviews";
+  static const String message = "route_message";
+  static const String webview = "route_webview";
+  static const String forgetpass = "route_forgetPassword";
+  static const String resetPass = "route_resetPassword";
+  static const String policy = "route_policy";
+  static const String logout = "logout";
+  static const String otp = "route_otp";
+}
