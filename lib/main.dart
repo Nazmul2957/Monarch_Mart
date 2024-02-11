@@ -1,87 +1,19 @@
 // ignore_for_file: unnecessary_null_comparison
-
 import 'dart:developer';
 import 'dart:io';
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:monarch_mart/address/address.dart';
-import 'package:monarch_mart/address/address_provider.dart';
-import 'package:monarch_mart/all_offer/all_offer_provider.dart';
-import 'package:monarch_mart/all_offer/all_offers.dart';
-import 'package:monarch_mart/app_components/app_route.dart';
-import 'package:monarch_mart/app_models/screen_aguments.dart';
-import 'package:monarch_mart/app_utils/global_variable.dart';
-import 'package:monarch_mart/cart/cart.dart';
-import 'package:monarch_mart/cart/cart_provider.dart';
-import 'package:monarch_mart/cart/checkout/bkash/bkash_provider.dart';
-import 'package:monarch_mart/cart/checkout/checkout.dart';
-import 'package:monarch_mart/cart/checkout/checkout_provider.dart';
-import 'package:monarch_mart/cart/checkout/nagad/nagad.dart';
-import 'package:monarch_mart/cart/checkout/nagad/nagad_provider.dart';
-import 'package:monarch_mart/cart/checkout/ssl_commerz/ssl_commerz.dart';
-import 'package:monarch_mart/cart/checkout/ssl_commerz/ssl_commerz_provider.dart';
-import 'package:monarch_mart/cart/checkout/ucb/ucb_provider.dart';
-import 'package:monarch_mart/cart/checkout/upay/upay.dart';
-import 'package:monarch_mart/cart/checkout/upay/upay_provider.dart';
-import 'package:monarch_mart/categories/category.dart';
-import 'package:monarch_mart/categories/category_provider.dart';
-import 'package:monarch_mart/common_webview/common_webview.dart';
-import 'package:monarch_mart/filtered_products/filter_provider.dart';
-import 'package:monarch_mart/filtered_products/filtered_product.dart';
-import 'package:monarch_mart/forget_password/forget_password.dart';
-import 'package:monarch_mart/forget_password/forget_password_provider.dart';
-import 'package:monarch_mart/home/home.dart';
-import 'package:monarch_mart/home/home_provider.dart';
-import 'package:monarch_mart/login/login.dart';
-import 'package:monarch_mart/login/login_provider.dart';
-import 'package:monarch_mart/orders/order.dart';
-import 'package:monarch_mart/orders/order_details/order_details.dart';
-import 'package:monarch_mart/orders/order_details/order_details_provider.dart';
-import 'package:monarch_mart/orders/order_provider.dart';
-import 'package:monarch_mart/otp/otp.dart';
-import 'package:monarch_mart/otp/otp_provider.dart';
-import 'package:monarch_mart/policy/policy.dart';
-import 'package:monarch_mart/policy/policy_provider.dart';
-import 'package:monarch_mart/product/product.dart';
-import 'package:monarch_mart/product/product_details/product_details.dart';
-import 'package:monarch_mart/product/product_details/product_details_provider.dart';
-import 'package:monarch_mart/product/product_provider.dart';
-import 'package:monarch_mart/product_review/product_review.dart';
-import 'package:monarch_mart/product_review/product_review_provider.dart';
-import 'package:monarch_mart/product_review/product_reviews.dart';
-import 'package:monarch_mart/profile/payment_info/payment.dart';
-import 'package:monarch_mart/profile/payment_info/payment_provider.dart';
-import 'package:monarch_mart/profile/profile.dart';
-import 'package:monarch_mart/profile/profile_edit/ProfileEditProvider.dart';
-import 'package:monarch_mart/profile/profile_edit/profile_edit.dart';
-import 'package:monarch_mart/profile/profile_provider.dart';
-import 'package:monarch_mart/registration/registration.dart';
-import 'package:monarch_mart/registration/registration_provider.dart';
-import 'package:monarch_mart/reset_password/reset_pass_provider.dart';
-import 'package:monarch_mart/reset_password/reset_password.dart';
-import 'package:monarch_mart/seller_details/seller_details.dart';
-import 'package:monarch_mart/seller_details/seller_details_provider.dart';
-import 'package:monarch_mart/state_manager/app_provider.dart';
-import 'package:monarch_mart/top_sellers/top_seller.dart';
-import 'package:monarch_mart/top_sellers/top_seller_provider.dart';
 import 'package:new_version/new_version.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-import 'app_components/app_constant.dart';
-import 'app_components/app_font.dart';
-import 'cart/checkout/bkash/bkash.dart';
-import 'cart/checkout/ucb/ucb.dart';
-import 'controllers/loader_controller.dart';
-import 'myHttpOverrides.dart';
-import 'notification_service/Payload.dart';
-import 'notification_service/local_notification_service.dart';
-import 'splash_screen/splash_screen.dart';
+import 'package:monarch_mart/core/app_export.dart';
+
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -151,11 +83,10 @@ class _MyAppState extends State<MyApp> {
       FirebaseMessaging.instance.getInitialMessage().then((message) {
         clickOption().then((value) {
           clear();
-          String type = value[0], url = value[1];
-
-          if (type == "deals" || type == "customer") {
-            handleNotificationClick(type: type, url: url);
-          } else {}
+          //String type = value[0], url = value[1];
+          // if (type == "deals" || type == "customer") {
+          //   handleNotificationClick(type: type, url: url);
+          // } else {}
         });
 
         if (message != null) {

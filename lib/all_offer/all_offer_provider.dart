@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_countdown_timer/countdown_timer_controller.dart';
 import 'package:monarch_mart/app_models/all_offer_response.dart';
-import 'package:monarch_mart/app_network/MyClient.dart';
+import 'package:monarch_mart/core/app_export.dart';
 
 class AllOfferProvider extends ChangeNotifier {
   AllOfferResponse? response;

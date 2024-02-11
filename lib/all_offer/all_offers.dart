@@ -1,21 +1,9 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:flutter_countdown_timer/countdown_timer_controller.dart';
-import 'package:flutter_countdown_timer/current_remaining_time.dart';
-import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
-import 'package:monarch_mart/app_components/app_route.dart';
 import 'package:monarch_mart/app_models/all_offer_response.dart';
-import 'package:monarch_mart/app_models/screen_aguments.dart';
-import 'package:monarch_mart/app_utils/app_bottom_navigation.dart';
-import 'package:monarch_mart/app_utils/app_cachedimage.dart';
-import 'package:monarch_mart/app_utils/app_drawer.dart';
-import 'package:monarch_mart/app_utils/app_screen.dart';
-import 'package:monarch_mart/app_utils/app_shimer.dart';
-import 'package:monarch_mart/app_utils/appbar.dart';
 import 'package:provider/provider.dart';
-
-import 'all_offer_provider.dart';
+import 'package:monarch_mart/core/app_export.dart';
 
 class AllOffer extends StatelessWidget {
   bool isNotFromBottomNavigation;

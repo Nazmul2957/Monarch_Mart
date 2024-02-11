@@ -137,16 +137,6 @@ class SplashScreen extends StatelessWidget {
       Future.delayed(Duration(seconds: 2), () {
         Navigator.pushReplacementNamed(context, AppRoute.home);
       });
-      // AppUpdateInfo info = await InAppUpdate.checkForUpdate();
-
-      // var status =
-      //     await NewVersion(androidId: "com.monarchmart").getVersionStatus();
-
-      // if (status != null) {
-      //   if (status.localVersion != status.storeVersion) {
-      //     androidUpdateDialog(context, status.storeVersion, info);
-      //   }
-      // }
     } else {
       //for ios
     }
@@ -194,10 +184,10 @@ class SplashScreen extends StatelessWidget {
 //                           SystemNavigator.pop();
 //                           var newversion = NewVersion(
 //                               forceAppVersion: storeVersion,
-//                               androidId: "com.monarchmart");
+//                               androidId: "com.ecommerce");
 
 //                           newversion.launchAppStore(
-//                               "https://play.google.com/store/apps/details?id=com.monarchmart");
+//                               "https://play.google.com/store/apps/details?id=com.ecommerce");
 //                         },
 //                         child: Text(
 //                           "Update",

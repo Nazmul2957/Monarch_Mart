@@ -101,7 +101,6 @@ class HomeProvider extends ChangeNotifier {
     carouselImageList = [];
     try {
       var response = await MyClient.get(endpoint: "/categories/featured");
-
       if (response.statusCode == 200) {
         categroyOption =
             TopCategroyOptionResponse.fromJson(jsonDecode(response.body));
@@ -116,7 +115,6 @@ class HomeProvider extends ChangeNotifier {
     carouselImageList = [];
     try {
       var response = await MyClient.get(endpoint: "/products/featured");
-
       if (response.statusCode == 200) {
         featuredProductResponse =
             FeaturedProductResponse.fromJson(jsonDecode(response.body));
@@ -150,10 +148,8 @@ class HomeProvider extends ChangeNotifier {
     try {
       var response =
           await MyClient.get(endpoint: "/category-wise-product-cats2");
-      print("/category-wise-product-cats2");
       if (response.statusCode == 200) {
         var value = CategoryResponse.fromJson(jsonDecode(response.body));
-
         value.data!.forEach((data) async {
           await getCategoryProducts(
               id: data.id.toString(), title: data.name.toString());
@@ -169,11 +165,9 @@ class HomeProvider extends ChangeNotifier {
       {required String id, required String title}) async {
     try {
       String endPoint = "/products/category/" + id;
-      print("/products/category/" + id);
       var caller = await MyClient.get(endpoint: endPoint);
       if (caller.statusCode == 200) {
         var response = ProductResponse.fromJson(jsonDecode(caller.body));
-
         productObjectList.add(ProductObjectHolder(
             title: title, response: response, viewMoreProductLink: endPoint));
 

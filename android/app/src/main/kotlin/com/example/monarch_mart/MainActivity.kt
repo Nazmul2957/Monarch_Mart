@@ -1,4 +1,4 @@
-package com.monarchmart
+package com.ecommerce
 
 import io.flutter.embedding.android.FlutterActivity
 

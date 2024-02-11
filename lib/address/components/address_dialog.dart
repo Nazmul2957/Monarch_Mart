@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:monarch_mart/app_components/app_color.dart';
@@ -114,7 +112,7 @@ class _AddressWindowState extends State<AddressWindow> {
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
             primary: color,
-            fixedSize: Size(width * 30, height * 5),
+          //  fixedSize: Size(width * 30, height * 5),
             alignment: Alignment.center,
             textStyle: TextStyle(
               color: Colors.white,

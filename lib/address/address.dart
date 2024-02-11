@@ -2,18 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:monarch_mart/address/address_provider.dart';
-import 'package:monarch_mart/app_components/app_color.dart';
-import 'package:monarch_mart/app_components/app_route.dart';
-import 'package:monarch_mart/app_models/address_data_model.dart';
-import 'package:monarch_mart/app_models/screen_aguments.dart';
-import 'package:monarch_mart/app_utils/app_bottom_navigation.dart';
-import 'package:monarch_mart/app_utils/app_shimer.dart';
-import 'package:monarch_mart/app_utils/appbar.dart';
-import 'package:monarch_mart/app_utils/customWidget.dart';
-import 'package:monarch_mart/app_utils/toast.dart';
 import 'package:provider/provider.dart';
-
+import 'package:monarch_mart/core/app_export.dart';
 import 'components/address_dialog.dart';
 
 class Address extends StatelessWidget {
